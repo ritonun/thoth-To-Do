@@ -1,0 +1,24 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=65.5.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thoth"
+version = "0.0.1"
+description = "A ToDo CLI application."
+readme = "README.md"
+dependencies = [
+    "click==8.1.7",
+    "mkdocs==1.5.3",
+    "mkdocs-click==0.8.1",
+    "mkdocstrings-python==1.8.0 "
+]
+
+[project.scripts]
+thoth = "thoth.__main__:cli"
+
+[tool.setuptools.packages.find]
+include = ["thoth*"]
+exclude = [".venv*", "data*", "dev*", "thoth.egg-info*"]

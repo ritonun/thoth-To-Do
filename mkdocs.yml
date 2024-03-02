@@ -1,0 +1,20 @@
+site_name: Thoth (To Do)
+site_url: https://example.com/
+theme:
+  name: readthedocs
+nav:
+  - Home: index.md
+  - Commands: commands.md
+  - API: api.md
+  - Dev: dev.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: false
+markdown_extensions:
+  - admonition
+  - codehilite
+  - mkdocs-click

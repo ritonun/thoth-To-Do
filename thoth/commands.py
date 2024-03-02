@@ -3,7 +3,7 @@ import os
 
 import click
 
-from thoth import file, todo
+from thoth import file, todoparser
 
 
 @click.command(help='Add a new todo')
@@ -13,7 +13,12 @@ def a(todo_string):
     click.echo('Example todo:')
     click.echo(example_todo)
     click.echo('')
-    todo.TodoParser(example_todo)
+    t = todoparser.TodoParser(example_todo)
+    todo = t.todo
+
+    for key in todo:
+        info = todo[key]
+        click.echo(f'{key}: {info}')
 
 
 @click.command(help='Remove a todo')

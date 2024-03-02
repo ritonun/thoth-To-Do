@@ -21,3 +21,4 @@ python3 -m pip install -e .
 - [ ] Add command
 - [ ] List command
 - [ ] Todo parser
+- [ ] Option: automatically add creation date

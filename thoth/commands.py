@@ -3,12 +3,17 @@ import os
 
 import click
 
-from thoth import file
+from thoth import file, todo
 
 
 @click.command(help='Add a new todo')
-def a():
-    click.echo('Add todo\n')
+@click.argument('todo_string')
+def a(todo_string):
+    example_todo = 'x (A) 2024-01-31 2024-01-01 todo text and information +my_tags @home due:2024-03-31'
+    click.echo('Example todo:')
+    click.echo(example_todo)
+    click.echo('')
+    todo.TodoParser(example_todo)
 
 
 @click.command(help='Remove a todo')

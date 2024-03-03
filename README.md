@@ -1,7 +1,7 @@
 Thoth (To Do)
 =======================
 
-`thoth` is a todo cli app based on todo.txt.
+`thoth` is a todo cli app based on todo.txt format.
 
 ## Run project (dev) (linux)
 ```
@@ -21,12 +21,12 @@ python3 -m pip install -e .
 - [x] Init command
 - [ ] Add command
 - [ ] List command
-- [ ] Modify command
-- [ ] Revert command (undo last action)
 - [x] Todo parser
 - [ ] Option: automatically add creation date
 
-## To Do 
+## To Do (Idea for future functionnality)
 - [ ] Podoromo timer + distraction free terminal
 - [ ] Terminal color for priority, projet tags, context tags
 - [ ] Terminal theme customisation 
+- [ ] Modify command
+- [ ] Revert command (undo last action)

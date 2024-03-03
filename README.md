@@ -22,12 +22,16 @@ python3 -m pip install -e .
 - [x] Init command
 - [ ] Add command
 - [ ] List command
+- [ ] Remove command
 - [x] Todo parser
 - [ ] Option: automatically add creation date
 
 ## To Do (Idea for future functionnality)
+- [ ] Config file for settings
 - [ ] Podoromo timer + distraction free terminal
 - [ ] Terminal color for priority, projet tags, context tags
 - [ ] Terminal theme customisation 
 - [ ] Modify command
 - [ ] Revert command (undo last action)
+- [ ] Extensive error handling with nice print help
+- [ ] Remove command accept multiple id to remove at the same time

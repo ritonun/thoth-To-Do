@@ -5,6 +5,27 @@ import click
 from thoth.settings import settings
 
 
+def dump_todo(todo_string):
+    with open(settings['todo_path'], 'a') as f:
+        f.write(todo_string + '\n')
+
+
+def load_todo(archive=False):
+    if archive:
+        path = settings['archive_path']
+    else:
+        path = settings['todo_path']
+
+    with open(path, 'r') as f:
+        lines = f.readlines()
+
+    todos = []
+    for line in lines:
+        l = line.replace('\n', '').strip()
+        todos.append(l)
+    return todos
+
+
 def create_folder(path):
     try:
         os.mkdir(path)

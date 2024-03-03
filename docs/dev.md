@@ -4,6 +4,10 @@
 ### todo.txt
 [todo.txt](https://github.com/todotxt/todo.txt)
 
+### Pytest
+`pytest tests/`
+
+
 ### Mkdocs commands
 * `mkdocs new [dir-name]` - Create a new project.
 * `mkdocs serve` - Start the live-reloading docs server.

@@ -6,7 +6,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "thoth"
-author = "ritonun"
+authors = [
+  {name = "ritonun"}
+]
 version = "0.0.1"
 description = "A ToDo CLI application."
 readme = "README.md"

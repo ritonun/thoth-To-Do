@@ -11,6 +11,7 @@ description = "A ToDo CLI application."
 readme = "README.md"
 dependencies = [
     "click==8.1.7",
+    "pytest==8.0.2",
     "mkdocs==1.5.3",
     "mkdocs-click==0.8.1",
     "mkdocstrings-python==1.8.0 "

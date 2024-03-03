@@ -16,9 +16,17 @@ python3 -m pip install -e .
 * `thoth ls [-s] [sort_arg]` - List all todos and sort them by arg (default: priority)
 * `thoth s [partial text]` - Search a specific to do by text
 
-## To Do 
+## Versions
+### v1.0.0
 - [x] Init command
 - [ ] Add command
 - [ ] List command
-- [ ] Todo parser
+- [ ] Modify command
+- [ ] Revert command (undo last action)
+- [x] Todo parser
 - [ ] Option: automatically add creation date
+
+## To Do 
+- [ ] Podoromo timer + distraction free terminal
+- [ ] Terminal color for priority, projet tags, context tags
+- [ ] Terminal theme customisation 

@@ -20,22 +20,14 @@ class TodoParser:
             raise SyntaxError('Priority syntax has to be A-Z')
         return value
 
-    def _extract_date(self, date_str):
-        # date format: aaaa-mm-dd
-        date_str = date_str.strip()
+    def _str_to_timestamp(self, date_str):
+        time = datetime.datetime.strptime(date_str, "%Y-%M-%d")
+        time = datetime.datetime.timestamp(time)
+        return time
 
-        if len(date_str) != 10:
-            raise SyntaxError('Date syntax has to be AAAA-MM-DD')
-
-        date_split = date_str.split('-')
-
-        year = date_split[0]
-        month = date_split[1]
-        day = date_split[2]
-
-        string = f'{year}/{month}/{day}'
-
-        return string
+    def _timestamp_to_str(self, time):
+        date = datetime.datetime.fromtimestamp(time).strftime('%Y-%M-%d')
+        return date
 
     def parse(self, txt):
         todo_str = {
@@ -82,11 +74,10 @@ class TodoParser:
         date = ''
         date_str = ''
         if Validators.date(txt[0:10]):
-            date = self._extract_date(txt[0:10])
-            date_str = txt[0:10]
+            date = self._str_to_timestamp(txt[0:10])
             txt = txt[10:].strip()
         if Validators.date(txt[0:10]):
-            todo_value['creation_date'] = self._extract_date(txt[0:10])
+            todo_value['creation_date'] = self._str_to_timestamp(txt[0:10])
             todo_str['creation_date'] = txt[0:10]
             todo_value['completion_date'] = date
             todo_str['completion_date'] = date_str
@@ -102,7 +93,7 @@ class TodoParser:
             date = due_date_str.replace('due:', '').strip()
             if Validators.date(date):
                 todo_str['due_date'] = date
-                todo_value['due_date'] = self._extract_date(date)
+                todo_value['due_date'] = self._str_to_timestamp(date)
 
             txt = txt.split('due:')[0]
             txt = txt.strip()

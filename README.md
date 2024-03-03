@@ -1,7 +1,8 @@
 Thoth (To Do)
 =======================
 
-`thoth` is a todo cli app based on todo.txt format.
+`thoth` is a todo cli app based on todo.txt format.  
+[Documentation](https://ritonun.github.io/thoth-To-Do/)  
 
 ## Run project (dev) (linux)
 ```
